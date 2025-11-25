@@ -59,9 +59,9 @@ $argon2_time = (microtime(true) - $argon2_start) * 1000;
 
 
 // Store in database
-$stmt = $conn->prepare("INSERT INTO users (email, password_hash, salt) VALUES (?, ?, ?)");
+$stmt = $conn->prepare("INSERT INTO users (email, password_hash) VALUES (?, ?)");
 if ($stmt) {
-    $stmt->bind_param("sss", $email, $argon2Hash, $salt);
+    $stmt->bind_param("ss", $email, $argon2Hash);
     $stmt->execute();
     if ($stmt->affected_rows > 0) {
     } else {
@@ -334,8 +334,7 @@ $conn->close();
                     <div class="code-block">
                         <ul>
                             <li><strong>Email:</strong> <?php echo htmlspecialchars($email); ?></li>
-                            <li><strong>Password Hash (Argon2ID):</strong><?php echo $argon2Hash; ?>/li>
-                            <li><strong>Salt:</strong> <?php echo htmlspecialchars($salt); ?></li>
+                            <li><strong>Password Hash:</strong><?php echo $argon2Hash; ?>/li>
                         </ul>
                     </div>
                 </div>
