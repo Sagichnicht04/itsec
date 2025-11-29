@@ -2,7 +2,7 @@ Idee war folgende:
 Erklären der ganzen Schritte zum speichern von User-Passwörtern in einer MariaDB
 
 Alles beginnt mit einem Sign Up screen (natürlich mit HTTPS) wo der User sein password eingibt und auf sign up klickt.
-Im nächsten Screen sieht man dann alle folge schritte. HTTP-Übertragung, Peppern, salten, hashen (hier werden verschiedene Algorithmen erklärt) und speichern. Als letztes wechselt man noch zu PHP-My Admin und schaut sich an wie das passwort dort abgespeichert ist.
+Im nächsten Screen sieht man dann alle folge schritte. Data breach check, HTTP-Übertragung, Peppern, salten, hashen (hier werden verschiedene Algorithmen erklärt) und speichern. Als letztes wechselt man noch zu PHP-My Admin und schaut sich an wie das passwort dort abgespeichert ist.
 Success!!
 
 Wenn Zeit ist kann man noch erklären wie Argon2Id aussieht:
