@@ -397,7 +397,7 @@ $conn->close();
                     <div class="code-block">
                         <ul>
                             <li><strong>Email:</strong> <?php echo htmlspecialchars($email); ?></li>
-                            <li><strong>Password Hash:</strong><?php echo $argon2Hash; ?>/li>
+                            <li><strong>Password Hash:</strong><?php echo $argon2Hash; ?></li>
                         </ul>
                     </div>
                 </div>
