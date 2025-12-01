@@ -113,7 +113,7 @@ $conn->close();
         
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #2196F3 0%, #00BCD4 100%);
             min-height: 100vh;
             padding: 20px;
         }
@@ -128,7 +128,7 @@ $conn->close();
         }
         
         .header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #2196F3 0%, #00BCD4 100%);
             color: white;
             padding: 30px;
             text-align: center;
@@ -152,8 +152,8 @@ $conn->close();
         }
         
         .step:hover {
-            border-color: #667eea;
-            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.1);
+            border-color: #2196F3;
+            box-shadow: 0 5px 15px rgba(33, 150, 243, 0.1);
         }
         
         .step-header {
@@ -164,7 +164,7 @@ $conn->close();
         
         .step-number {
             display: inline-block;
-            background: #667eea;
+            background: #2196F3;
             color: white;
             width: 30px;
             height: 30px;
@@ -237,7 +237,7 @@ $conn->close();
         
         .back-btn {
             display: inline-block;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #2196F3 0%, #00BCD4 100%);
             color: white;
             padding: 12px 24px;
             text-decoration: none;
