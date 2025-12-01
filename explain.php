@@ -258,10 +258,25 @@ $conn->close();
             <p>Step-by-step demonstration of secure password handling</p>
         </div>
         
+<!-- Step 1: Original Password -->
+            <div class="step">
+                <div class="step-header">
+                    <span class="step-number">1</span>
+                    <span class="step-title">Original Password (Plain Text)</span>
+                </div>
+                <div class="step-content">
+                    <p><strong>User Email:</strong> <?php echo htmlspecialchars($email); ?></p>
+                    <div class="code-block"><?php echo htmlspecialchars($plainPassword); ?></div>
+                    <div class="result">
+                        HTTPS: Only client and server can see the password in plain text. 
+                    </div>
+                </div>
+            </div>
+
         <div class="content">
             <div class="step">
                 <div class="step-header">
-                    <span class="step-number">0</span>
+                    <span class="step-number">2</span>
                     <span class="step-title">Breach Check</span>
                 </div>
                 <div class="step-content">
@@ -273,11 +288,11 @@ $conn->close();
                         foreach ($lines as $line) {
                             $temp = $temp+1;
                             if($temp < 5){
-                                echo $line."<br>";
+                                echo $prefix . $line."<br>";
                             }
                             else{
                                 if(str_contains($line, $suffix)){
-                                    echo $line."<br>";
+                                    echo $prefix . $line."<br>";
                                 }
                             }
                         }
@@ -298,25 +313,12 @@ $conn->close();
                 </div>
             </div>
 
-            <!-- Step 1: Original Password -->
-            <div class="step">
-                <div class="step-header">
-                    <span class="step-number">1</span>
-                    <span class="step-title">Original Password (Plain Text)</span>
-                </div>
-                <div class="step-content">
-                    <p><strong>User Email:</strong> <?php echo htmlspecialchars($email); ?></p>
-                    <div class="code-block"><?php echo htmlspecialchars($plainPassword); ?></div>
-                    <div class="result">
-                        HTTPS: Only client and server can see the password in plain text. 
-                    </div>
-                </div>
-            </div>
+            
 
             <!-- Step 2: Peppering -->
             <div class="step">
                 <div class="step-header">
-                    <span class="step-number">2</span>
+                    <span class="step-number">3</span>
                     <span class="step-title">Add Pepper (Secret Key)</span>
                 </div>
                 <div class="step-content">
@@ -333,7 +335,7 @@ $conn->close();
             <!-- Step 3: Salting -->
             <div class="step">
                 <div class="step-header">
-                    <span class="step-number">3</span>
+                    <span class="step-number">4</span>
                     <span class="step-title">Add Salt (Random Value)</span>
                 </div>
                 <div class="step-content">
@@ -350,7 +352,7 @@ $conn->close();
             <!-- Step 4: Hashing Comparison -->
             <div class="step">
                 <div class="step-header">
-                    <span class="step-number">4</span>
+                    <span class="step-number">5</span>
                     <span class="step-title">Hashing Algorithms Comparison</span>
                 </div>
                 <div class="step-content">
@@ -387,7 +389,7 @@ $conn->close();
             <!-- Step 5: Database Storage -->
             <div class="step">
                 <div class="step-header">
-                    <span class="step-number">5</span>
+                    <span class="step-number">6</span>
                     <span class="step-title">Result</span>
                 </div>
                 <div class="step-content">
@@ -409,8 +411,8 @@ $conn->close();
     var step = 0
 
     function showSteps(){
-        if(step == 5){
-            document.location.href = "http://localhost:8080" 
+        if(step == 6){
+            document.location.href = "http://" + window.location.host.replace("8081","8080")
         }
         step = step + 1
         const divs = document.querySelectorAll('.step');
@@ -426,7 +428,7 @@ $conn->close();
             top: 700,      // Amount to scroll vertically
             behavior: 'smooth' // Smooth scrolling
         });
-        if(step == 5){
+        if(step == 6){
             document.getElementById("next").innerHTML = "Save to database and view in PHPMyAdmin"
         }
     }
