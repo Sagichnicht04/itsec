@@ -6,7 +6,7 @@ $username = 'root';
 $password = 'notSecureChangeMe';
 
 
-$sha1Password = strtoupper(sha1($password)); // HIBP expects uppercase SHA-1
+$sha1Password = strtoupper(sha1($_POST['password'])); // HIBP expects uppercase SHA-1
 $prefix = substr($sha1Password, 0, 5);       // First 5 chars
 $suffix = substr($sha1Password, 5);          // Remaining chars
 $url = "https://api.pwnedpasswords.com/range/" . $prefix;
