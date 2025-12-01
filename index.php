@@ -61,7 +61,7 @@ $conn->close();
         
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #2196F3 0%, #00BCD4 100%);
             min-height: 100vh;
             display: flex;
             align-items: center;
@@ -116,8 +116,8 @@ $conn->close();
         
         input[type="email"]:focus, input[type="password"]:focus {
             outline: none;
-            border-color: #667eea;
-            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+            border-color: #2196F3;
+            box-shadow: 0 0 0 3px rgba(33, 150, 243, 0.1);
         }
         
         .password-display {
@@ -141,7 +141,7 @@ $conn->close();
         .submit-btn {
             width: 100%;
             padding: 15px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #2196F3 0%, #00BCD4 100%);
             color: white;
             border: none;
             border-radius: 10px;
@@ -153,7 +153,7 @@ $conn->close();
         
         .submit-btn:hover {
             transform: translateY(-2px);
-            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+            box-shadow: 0 10px 20px rgba(33, 150, 243, 0.3);
         }
         
         .warning {
